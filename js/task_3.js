@@ -1,34 +1,49 @@
-// Напиши скрипт имитирующий авторизацию администратора в панели управления.
+// Напиши фукцнию findLongestWord(string), которая принимает параметром произвольную строку (в строке будут только слова и пробелы) и возвращает самое длинное слово в этой строке.
 
-// Есть переменная message в которую будет записано сообщение о результате. При загрузке страницы у посетителя запрашивается пароль через prompt:
+// const findLongestWord = function(string) {
+//   // твой код
+// };
 
-// Если нажали Cancel, записать в message строку 'Отменено пользователем!'
-// В протовном случае, если введен пароль который совпадает со значением константы ADMIN_PASSWORD, записать в message строку 'Добро пожаловать!'
-// В противном случае, то есть если ни одно из предыдущих условий не выполнилось, записать в message строку 'Доступ запрещен, неверный пароль!'
-// После всех проверок вывести в alert значение переменной message.
-// const ADMIN_PASSWORD = 'jqueryismyjam';
-// let message;
+// /*
+//  * Вызовы функции для проверки работоспособности твоей реализации.
+//  */
+// console.log(findLongestWord('The quick brown fox jumped over the lazy dog')); // 'jumped'
+
 
 'use strict';
 
-const ADMIN_PASSWORD = 'jqueryismyjam';
-let message;
+console.log('hello')
 
-do {
-    message = prompt('Введите пароль администратора');
-    if (message === ADMIN_PASSWORD) {
-        message = 'Добро пожаловать!';
-        break;
-    }
+const text = 'The quick brown fox jumped over the lazy dog';
 
-    if (message === null) {
-        message = 'Отменено пользователем!';
-        break;
-    } else {
-        message = 'Доступ запрещен, неверный пароль!';
-        break;
-    }
-} while (true);
+const textArray = text.split(' ');
+console.log(textArray);
 
-alert(message);
+for (let i = 0; i < textArray.length; i += 1) {
+    
+    const item = textArray[i]
+    const itemLength = item.length
+    console.log(`${item} - ${itemLength}`);
+    if (itemLength > itemLength + 1);
+    console.log(itemLength);
+    // if (Math.max(item.length) > Math.min(item.length)) {
+}
 
+// for (const word of textArray) {
+//     // console.log(word);
+
+//     const sumOfLetter = word.length;
+//     console.log(sumOfLetter);
+
+// }
+
+// const textString = textArray.join(' ');
+// console.log(textString);
+
+
+
+// const findLongestWord = function ( ...arg) {
+//     console.log(arg);
+// };
+
+// findLongestWord(textArray);

@@ -21,10 +21,12 @@ const formatString = function (string) {
         const textEnd = textString + '...';
         console.log(textEnd);
         console.log(`Общая длина строки: ${textEnd.length}`);
-        return;
     }
+    else {
         console.log(string);
         console.log(`Общая длина строки: ${string.length}`);
+    }
+    return;
 }
 
 console.log(formatString('Curabitur ligula sapien, tincidunt non.'));

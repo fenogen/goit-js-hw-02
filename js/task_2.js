@@ -4,6 +4,7 @@
 // и возвращающую цену гравировки всех слов в строке.
 
 
+'use strict';
 
 const text = 'Proin sociis natoque et magnis parturient montes mus';
 const price = 10;
