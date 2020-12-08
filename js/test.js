@@ -17,4 +17,5 @@ const numbers = [5, 5, 5, 5, 5];
       total += numbers[i];
       // console.log(total);
 }
-    console.log(total);
+console.log(total);
+    

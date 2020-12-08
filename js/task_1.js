@@ -28,6 +28,8 @@ logItems(numbers);
 
 // ------------------------- Пример вызова функции непосредстевнно по индексу:
 
+console.log('Пример вызова функции непосредстевнно по индексу:');
+
 const addIndex = function (array, index) {
         
     const name = array[index];

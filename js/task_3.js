@@ -1,49 +1,30 @@
-// Напиши фукцнию findLongestWord(string), которая принимает параметром произвольную строку (в строке будут только слова и пробелы) и возвращает самое длинное слово в этой строке.
+// // Напиши фукцнию findLongestWord(string), которая принимает параметром произвольную строку 
+// (в строке будут только слова и пробелы) и возвращает самое длинное слово в этой строке.
 
-// const findLongestWord = function(string) {
-//   // твой код
-// };
-
-// /*
-//  * Вызовы функции для проверки работоспособности твоей реализации.
-//  */
-// console.log(findLongestWord('The quick brown fox jumped over the lazy dog')); // 'jumped'
 
 
 'use strict';
 
-console.log('hello')
 
-const text = 'The quick brown fox jumped over the lazy dog';
+const findLongestWord = function (string) {
+    const textArray = string.split(' ');
+    console.log(textArray);
+    let word = '';                                    // ----------> Сравнили с пустой стройкой
 
-const textArray = text.split(' ');
-console.log(textArray);
-
-for (let i = 0; i < textArray.length; i += 1) {
-    
-    const item = textArray[i]
-    const itemLength = item.length
-    console.log(`${item} - ${itemLength}`);
-    if (itemLength > itemLength + 1);
-    console.log(itemLength);
-    // if (Math.max(item.length) > Math.min(item.length)) {
+    for (let i = 0; i < textArray.length; i += 1) {
+        const item = textArray[i];
+        
+        if (word.length < item.length) {
+            word = item;   
+        }
+    }
+    console.log(word);
+    return;
 }
 
-// for (const word of textArray) {
-//     // console.log(word);
 
-//     const sumOfLetter = word.length;
-//     console.log(sumOfLetter);
+findLongestWord('The quick brown fox jumped over the lazy dog'); // 'jumped'
 
-// }
+findLongestWord('Google do a roll'); // 'Google'
 
-// const textString = textArray.join(' ');
-// console.log(textString);
-
-
-
-// const findLongestWord = function ( ...arg) {
-//     console.log(arg);
-// };
-
-// findLongestWord(textArray);
+findLongestWord('May the force be with you'); // 'force'

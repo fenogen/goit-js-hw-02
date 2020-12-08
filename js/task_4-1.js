@@ -6,9 +6,6 @@
 
 'use strict';
 
-const string = 'Vestibulum facilisis, purus nec pulvinar iaculis.';
-
-
 const formatString = function (string) {
 
     const textArray = string.split('');
@@ -22,18 +19,18 @@ const formatString = function (string) {
         console.log(textEnd);
         console.log(`Общая длина строки: ${textEnd.length}`);
     }
-    else {
+    else {                                                           // -----> с использованием else
         console.log(string);
         console.log(`Общая длина строки: ${string.length}`);
     }
     return;
 }
 
-console.log(formatString('Curabitur ligula sapien, tincidunt non.'));
+formatString('Curabitur ligula sapien, tincidunt non.');
 
-console.log(formatString('Vestibulum facilisis, purus nec pulvinar iaculis.'));
+formatString('Vestibulum facilisis, purus nec pulvinar iaculis.');
 
-console.log(formatString('Curabitur ligula sapien.'));
+formatString('Curabitur ligula sapien.');
 
-console.log(formatString('Nunc sed turpis. Curabitur a felis in nunc fringilla tristique.'));
+formatString('Nunc sed turpis. Curabitur a felis in nunc fringilla tristique.');
 

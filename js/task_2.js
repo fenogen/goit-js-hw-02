@@ -6,8 +6,6 @@
 
 'use strict';
 
-const text = 'Proin sociis natoque et magnis parturient montes mus';
-const price = 10;
 
 const calculateEngravingPrice = function (message, pricePerWord) {
     const textArray = message.split(' ');
@@ -17,13 +15,12 @@ const calculateEngravingPrice = function (message, pricePerWord) {
     return;
 };
 
-// calculateEngravingPrice(text, price);
 
-console.log(calculateEngravingPrice('Proin sociis natoque et magnis parturient montes mus', 10)); // 80
+calculateEngravingPrice('Proin sociis natoque et magnis parturient montes mus', 10); // 80
 
-console.log(calculateEngravingPrice('Proin sociis natoque et magnis parturient montes mus', 20)); // 160
+calculateEngravingPrice('Proin sociis natoque et magnis parturient montes mus', 20); // 160
 
-console.log(calculateEngravingPrice('Donec orci lectus aliquam est magnis', 40)); // 240
+calculateEngravingPrice('Donec orci lectus aliquam est magnis', 40); // 240
 
-console.log(calculateEngravingPrice('Donec orci lectus aliquam est magnis', 20)); // 120
+calculateEngravingPrice('Donec orci lectus aliquam est magnis', 20); // 120
  
