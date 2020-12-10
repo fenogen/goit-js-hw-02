@@ -13,7 +13,7 @@
 
 let input;
 let total = 0;
-const numbers = [];
+const numbers = [];                                   // ----> сделать через let если нужно обнуление (см.ниже)
 
 do {
   input = prompt('Введите целое число');
@@ -22,15 +22,18 @@ do {
     break;
   }
 
-  if (input >= 1 || input <= 0) {      // ------> сделано так что бы можно было добавить и "минусовые числа". Лучше сделать проверку на "число"
+
+  // if (input >= 1 || input < 1)                   // ------> не корректно!
+ if (Number(input) > 1 || Number(input) < 1) {    
     input = Number(input);
     numbers.push(input);
     console.log(numbers);
     
   } else {
     console.log('Было введено не число, попробуйте еще раз');
-    break;
+    // numbers = [];                                // ----> позволяет обнулить счетчик если уже біли введены цифры
   }
+
 } while (true);
 
 for (let i = 0; i < numbers.length; i += 1) {
